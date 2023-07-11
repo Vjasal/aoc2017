@@ -1,6 +1,9 @@
 package com.vjasal.aoc.days2017;
 
 import com.vjasal.aoc.common.AocDay;
+import com.vjasal.aoc.common.InputUtil;
+
+import java.util.List;
 
 public class Day01 extends AocDay {
 
@@ -10,11 +13,30 @@ public class Day01 extends AocDay {
 
     @Override
     public long solvePuzzle1(String input) {
-        return 0;
+        List<Integer> digits = InputUtil.toIntList(input);
+        int sum = 0;
+        for (int i = 0; i < digits.size(); i++) {
+            int first = digits.get(i);
+            int second = digits.get((i + 1) % digits.size());
+            if (first == second) {
+                sum += first;
+            }
+        }
+        return sum;
     }
 
     @Override
     public long solvePuzzle2(String input) {
-        return 0;
+        List<Integer> digits = InputUtil.toIntList(input);
+        int sum = 0;
+        int half = digits.size() / 2;
+        for (int i = 0; i < digits.size(); i++) {
+            int first = digits.get(i);
+            int second = digits.get((i + half) % digits.size());
+            if (first == second) {
+                sum += first;
+            }
+        }
+        return sum;
     }
 }
