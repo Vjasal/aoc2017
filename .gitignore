@@ -29,4 +29,4 @@ bin/
 .DS_Store
 
 ### Token File ###
-src/resources/session_token.txt
+src/main/resources/session_token.txt
