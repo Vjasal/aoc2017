@@ -48,12 +48,13 @@ public abstract class AocDay {
             try (BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream()))) {
                 String line;
                 while ((line = reader.readLine()) != null) {
-                    stringBuilder.append(line);
-                    stringBuilder.append("\n");
+                    stringBuilder.append(line).append("\n");
                 }
             }
 
+            stringBuilder.setLength(stringBuilder.length() - 1);
             input = stringBuilder.toString();
+
             writeInputFile(input);
             return input;
         } catch (IOException e) {
@@ -73,9 +74,9 @@ public abstract class AocDay {
             StringBuilder stringBuilder = new StringBuilder();
             String line;
             while ((line = reader.readLine()) != null) {
-                stringBuilder.append(line);
-                stringBuilder.append("\n");
+                stringBuilder.append(line).append("\n");
             }
+            stringBuilder.setLength(stringBuilder.length() - 1);
             return stringBuilder.toString();
         } catch (IOException e) {
             logger.warning("Error while reading input file (" + path + ")");

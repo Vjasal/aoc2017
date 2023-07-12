@@ -1,4 +1,4 @@
-package com.vjasal.aoc.common;
+package com.vjasal.aoc.common.util;
 
 import java.io.StringReader;
 import java.util.ArrayList;
@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.stream.Collectors;
 
-public class InputUtil {
+public class Input {
 
     public static List<Integer> toIntList(String s) {
         return s.chars().boxed().filter(c -> c >= '0' && c <= '9').map(c -> c - 48).collect(Collectors.toList());
