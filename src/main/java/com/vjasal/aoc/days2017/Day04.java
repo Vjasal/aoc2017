@@ -3,7 +3,6 @@ package com.vjasal.aoc.days2017;
 import com.vjasal.aoc.common.AocDay;
 import com.vjasal.aoc.common.util.Input;
 
-import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
